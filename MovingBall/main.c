@@ -12,7 +12,7 @@ typedef struct {
 typedef struct {
     int x;
     int y;
-    unsigned int radius;
+    float  radius;
     Color color;
 } Ball;
 
@@ -26,7 +26,6 @@ int main(void)
     Ball ball = {
         .x = w.width / 2,
         .y = w.height / 2,
-        .radius = 20,
         .color = WHITE
     };
 
@@ -60,7 +59,7 @@ int main(void)
         }
 
         //- 2. Updating position
-        ball.radius = 20 + rand() % 10;
+        ball.radius = 20.0 + rand() % 10;
 
         //- 3. Drawing
         BeginDrawing();
